@@ -11,4 +11,13 @@ end, { desc = "Format" })
 
 -- Open term by ToggleTerm plugin.
 -- vim.keymap.set({ "n", "i", "t" }, "<C-j>", "<Cmd>ToggleTerm<CR>")
-map({ "n", "i", "t" }, "<leader>\\", "<Cmd>ToggleTerm<CR>", { desc = "ToggleTerm" })
+-- map({ "n", "i", "t" }, "<leader>\\", "<Cmd>ToggleTerm<CR>", { desc = "ToggleTerm" })
+
+map({ "n", "i", "t" }, "<leader>\\", function()
+  if vim.bo.buftype == "terminal" then
+    vim.cmd("ToggleTerm")
+  else
+    vim.cmd("write")
+    vim.cmd("ToggleTerm")
+  end
+end, { desc = "ToggleTerm with autosave" })
