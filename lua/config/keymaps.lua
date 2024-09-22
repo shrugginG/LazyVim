@@ -14,10 +14,14 @@ end, { desc = "Format" })
 map({ "n", "i", "t" }, "<leader>\\", "<Cmd>ToggleTerm<CR>", { desc = "ToggleTerm" })
 
 -- map({ "n", "i", "t" }, "<leader>\\", function()
---   if vim.bo.buftype == "terminal" then
---     vim.cmd("ToggleTerm")
---   else
---     vim.cmd("write")
---     vim.cmd("ToggleTerm")
---   end
+--     if vim.bo.buftype == "terminal" then
+--         vim.cmd("ToggleTerm")
+--     else
+--         vim.cmd("write")
+--         vim.cmd("ToggleTerm")
+--     end
 -- end, { desc = "ToggleTerm with autosave" })
+
+map({ "n", "i", "t" }, "<leader>at", "<Cmd>Copilot toggle<CR>", { desc = "Copilot toggle" })
+
+map({ "n", "i" }, "<C-a>", "ggVG", { desc = "Copy all content" })
