@@ -25,3 +25,5 @@ map({ "n", "i", "t" }, "<leader>\\", "<Cmd>ToggleTerm<CR>", { desc = "ToggleTerm
 map({ "n", "i", "t" }, "<leader>at", "<Cmd>Copilot toggle<CR>", { desc = "Copilot toggle" })
 
 map({ "n", "i" }, "<C-a>", "ggVG", { desc = "Copy all content" })
+
+map("n", "<leader>cu", "<Cmd>UndotreeToggle<CR>", { desc = "Toggle Undotree" })
