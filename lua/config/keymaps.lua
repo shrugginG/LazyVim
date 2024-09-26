@@ -29,3 +29,15 @@ map({ "n", "i" }, "<C-a>", "ggVG", { desc = "Copy all content" })
 map("n", "<leader>cu", "<Cmd>UndotreeToggle<CR>", { desc = "Toggle Undotree" })
 
 map("n", "<Tab>", require("mini.files").open)
+
+vim.keymap.set("n", "<C-Y>", "<Cmd>YankyRingHistory<CR>", { desc = "Open yank  history list files" })
+
+vim.keymap.set("n", "F", function()
+    require("flash").jump({
+        search = { mode = "search", max_length = 0 },
+        label = { after = { 0, 0 } },
+        pattern = "^",
+    })
+end, { desc = "Jump to the first character of the line" })
+
+vim.keymap.set("n", "<leader>ol", "<Cmd>OverseerToggle!<CR>", { desc = "Toogle overseer task list" })
