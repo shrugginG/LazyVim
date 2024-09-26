@@ -27,3 +27,5 @@ map({ "n", "i", "t" }, "<leader>at", "<Cmd>Copilot toggle<CR>", { desc = "Copilo
 map({ "n", "i" }, "<C-a>", "ggVG", { desc = "Copy all content" })
 
 map("n", "<leader>cu", "<Cmd>UndotreeToggle<CR>", { desc = "Toggle Undotree" })
+
+map("n", "<Tab>", require("mini.files").open)
